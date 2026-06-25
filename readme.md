@@ -143,6 +143,10 @@ Refinement is visualized as a physical territory maps of ideas, showing how thou
 *   **Dual-Layer Particle Background:** Uses independent, hardware-accelerated Canvas layers (background and foreground) driving physics-based dust particles styled after classical brass or gold elements to create an immersive, focused workspace.
 
 ---
+![Agent Log Telemetry & Refinement Interface gif](action2.gif)
+
+
+---
 
 ## 6. Asynchronous High-Performance Pipelines
 
