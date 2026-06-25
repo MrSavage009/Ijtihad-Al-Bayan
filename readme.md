@@ -4,7 +4,7 @@
 
 ***
 
-**Ijtihād al-Bayān** (اِجْتِهَادُ الْبَيَان) translates from classical terminology as the **"intellectual exertion to achieve ultimate clarity of expression."** 
+**Ijtihād al-Bayān** (اِجْتِهَادُ الْبَيَان) translates from classical terminology as the **"Intellectual endeavor for eloquent expression."** 
 
 This application is a domain-agnostic, client-side cognitive engineering system. It is designed to act as an automated editorial board, applying deep hermeneutic analysis to any written draft. Whether processing philosophical treatises, linguistic analyses, technical documentation, legal briefs, or academic research papers, the system systematically deconstructs, critiques, and refactors text to optimize clarity, logical consistency, and rhetorical impact.
 
