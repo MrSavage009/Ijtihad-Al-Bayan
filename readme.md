@@ -91,9 +91,9 @@ Refinement fails when a system cannot precisely map an abstract critique to a ph
     2.  *Semantic Lens:* Leverages localized contextual parsing to identify target segments where the critique's intent matches the underlying meaning, bypassing literal wording mismatches.
     3.  *Structural Lens:* Targets structural hierarchies (specific sections, headers, or surrounding transitional paragraphs) based on thematic layout analysis.
 *   **Vector of Anchoring Confidence (VAC):** Dynamically outputs a confidence percentage representing the combined output of all active PASL lenses.
-    *   *VAC $\ge$ 95%:* Classifies the task as a **Precise Refinement**, running a surgical, isolated edit on that exact paragraph.
-    *   *95% $>$ VAC $\ge$ 80%:* Classifies the task as a **Holistic Refinement**, signaling the system to refactor the broader section rather than risking a blind, localized replacement.
-    *   *VAC $<$ 80%:* Gracefully discards the task to prevent hallucinations, logging the mismatch in the telemetry view.
+    *   *VAC &ge; 95%:* Classifies the task as a **Precise Refinement**, running a surgical, isolated edit on that exact paragraph.
+    *   *95% &gt; VAC &ge; 80%:* Classifies the task as a **Holistic Refinement**, signaling the system to refactor the broader section rather than risking a blind, localized replacement.
+    *   *VAC &lt; 80%:* Gracefully discards the task to prevent hallucinations, logging the mismatch in the telemetry view.
 *   **Epistemic Mirroring Translator (EMT):** An translation layer that processes abstract critique statements into direct, actionable edit commands (e.g., `REPLACE`, `INSERT`, `MERGE`, `SPLIT`). It logs methodological positions to explain *why* an edit is structured a certain way based on current text limits.
 *   **Self-Correcting Quote Repair:** A background regex-repair routine. If the critique model references a quote that is slightly misquoted, truncated, or lacks precise matching capitalization, the repair subroutine fuzzy-scans the document structure, finds the closest matches, and re-anchors the task dynamically.
 
