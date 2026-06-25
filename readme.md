@@ -12,13 +12,13 @@ This application is a domain-agnostic, client-side cognitive engineering system.
 
 ## 📸 System Interface
 
-![System Interface Overview](docs/images/system_interface_overview.png)
+![System Interface Overview](overview.gif)
 *Figure 1: The dual-column monolithic interface, featuring real-time telemetry, interactive controls, and the dynamic output workspace.*
 
 ### Precise Critique & Multi-Axis Scorecard
 The system evaluates text through quantitative metrics and highly contextual diagnostic cards. Below is an example of the metrics visualizer and precision-anchored critique output:
 
-![Multi-Axis Metrics & Diagnostic Cards](docs/images/metrics_diagnostics.png)
+![Multi-Axis Metrics & Diagnostic Cards](scorecard.png)
 *Figure 2: Real-time Multi-Axis Scorecard (Clarity, Rigor, Flow, Insight, Concision) and targeted Diagnostic Critique Cards isolating structural and logical issues.*
 
 ---
