@@ -125,34 +125,21 @@ Refinement is visualized as a physical territory maps of ideas, showing how thou
 
 ## 5. Telemetry & User Experience Interfaces
 
-```
-┌────────────────────────────────────────────────────────────────────────┐
-│                          AGENT LOG THEATRE                             │
-├────────────────────────────────────────────────────────────────────────┤
-│  MASTER LOG LIST                      RICH DETAIL TILE (STEP #3)       │
-│ ┌─────────────────────────┐ ┌────────────────────────────────────────┐ │
-│ │ █ Step 3: Refinement    │ │ #3 - SUCCESS    [ 🔬 RIGOR REPAIR ]    │ │
-│ │ █ Step 2: Observation   │ │ ────────────────────────────────────── │ │
-│ │ █ Step 1: Initial Draft │ │ Action: Adjusted Greek translation     │ │
-│ │                         │ │ Tool:   Context-Aware Refiner V3       │ │
-│ │                         │ │                                        │ │
-│ │                         │ │ Metrics:                               │ │
-│ │                         │ │ ┌───────────────────┐                  │ │
-│ │                         │ │ │ Duration: 1450ms  │                  │ │
-│ │                         │ │ │ Tokens:   1284    │                  │ │
-│ │                         │ │ └───────────────────┘                  │ │
-│ │                         │ │                                        │ │
-│ │                         │ │ Result:                                │ │
-│ │                         │ │ ▒ \- "He chose..."                     │ │
-│ │                         │ │ ░ \+ "He systematically selected..."   │ │
-│ └─────────────────────────┘ └────────────────────────────────────────┘ │
-└────────────────────────────────────────────────────────────────────────┘
-```
+![Agent Log Telemetry & Refinement Interface](telemetry_view.png)
+*Figure 3: Detailed view of real-time multi-agent telemetry, showing progress tracking, inline diffs, and precise anchor verification.*
 
 *   **Agent Log Theatre (Master-Detail Telemetry):** A specialized diagnostic dashboard designed to visualize complex background actions:
-    *   *Master List:* A chronological, real-time list of agent actions.
+    *   *Master List:* A chronological, real-time list of agent actions, showing the state of processing (e.g., Sensing, Planning, acting on local edits).
     *   *Detail Pane:* Renders rich metric cards detailing execution speeds, token costs, structural diffs, specific axes repaired, and active tool signatures.
-*   **Glimmer Word-by-Word Theatre Engine:** A cinematic preview system that uses requestAnimationFrame cycles to reveal the final text word-by-word with randomized layout delay, providing an analog, high-fidelity experience of the generated results.
+*   **Dynamic Budget Allocation & Token Tracking:** Renders a real-time, color-coded visual progress bar (e.g., `Tokens: 12836 / 25000`) representing cognitive fuel consumption.
+    *   *Rate Limit Adaptive:* Automatically updates after each API call.
+    *   *Aesthetic Warning Thresholds:* Changes color (from standard blue to gold and warning red) as the allocated budget nears depletion, allowing manual resumption or allocation increases mid-session.
+*   **Color-Coded Inline Character & Word Diffs:** Renders real-time, structural diffs directly inside the text editor workspace for every refinement cycle.
+    *   *Visual Clarity:* Insertions are highlighted with inline green markers, and deletions are represented with high-visibility red strikethroughs, letting you immediately evaluate semantic modifications within the surrounding prose context.
+*   **Parallel Tool Call Dispatch & Validation Tracking:** Visualizes the agent system's internal tool routing processes. The left telemetry panel displays real-time reports of:
+    *   *Precise Anchor Sensor logs:* Shows PASL checking critiques against the document using mathematical confidence scores (e.g., `PASL: Flaw '...' anchored via lexical lenses (95% confidence)`).
+    *   *Promotion Telemetry:* Displays when the system safely elevates a task to the `HOLISTIC` layer (e.g., `Promoting to HOLISTIC`) if localized anchors fall below the safety threshold.
+*   **Glimmer Word-by-Word Theatre Engine:** A cinematic preview system that uses `requestAnimationFrame` cycles to reveal the final text word-by-word with randomized layout delay, providing an analog, high-fidelity experience of the generated results.
 *   **Dual-Layer Particle Background:** Uses independent, hardware-accelerated Canvas layers (background and foreground) driving physics-based dust particles styled after classical brass or gold elements to create an immersive, focused workspace.
 
 ---
@@ -169,8 +156,13 @@ Refinement is visualized as a physical territory maps of ideas, showing how thou
 
 ## 7. Technical Specifications & Local Execution Profile
 
-*   **Zero-Dependency Local Compatibility (LM Studio & Llama.cpp):** Completely optimized to run on standard, consumer-grade hardware via LM Studio or Llama.cpp:
-    *   *CORS Handshake Safety:* Supports standard local CORS headers out of the box.
-    *   *Strict Parameter Elimination:* Automatically intercepts and strips advanced parameters (such as `response_format: { type: "json_object" }`) when talking to local servers like LM Studio, preventing API-level rejections.
-    *   *Local Timeout Scaling:* Detects local server routing (`ollama_local`) and dynamically scales connection timeouts from **90 seconds** to **10 minutes** to allow local consumer GPUs/CPUs to complete long reasoning chains.
-*   **Client-Side Monolith Assembly:** Runs completely inside a single, standard `.html` file. Requires zero remote database connections, securing your draft documents inside your own local browser storage context.
+*   **Hybrid Execution Architecture (Cloud & Local):** Designed to support both high-throughput cloud endpoints and fully offline local servers:
+    *   *Cloud Providers:* Native support for Google Gemini (leveraging advanced `v1beta` system instructions and structured JSON schemas) and Groq (leveraging high-speed OpenAI-compliant endpoints).
+    *   *Local Providers:* Standardized integration with local engines like LM Studio and Ollama (operating under the `ollama_local` key configuration).
+*   **Zero-Dependency Local Compatibility (LM Studio & Llama.cpp):** Fully optimized to run on standard, consumer-grade hardware:
+    *   *CORS Handshake Safety:* Supports standard local CORS headers natively to allow browsers to communicate with local server ports.
+    *   *Strict Parameter Elimination:* Automatically intercepts and strips advanced API-level parameters (such as `response_format: { type: "json_object" }`) when talking to local servers like LM Studio, avoiding server-side API rejections while letting our highly explicit prompts handle the JSON structure naturally.
+    *   *Dynamic Timeout Scaling:* Detects local server routing and dynamically sets timeout thresholds and robust fallback execution limits based on the active provider's performance profile, giving local consumer hardware sufficient latitude to complete long, multi-stage reasoning paths.
+*   **Client-Side Monolith Assembly:** Runs completely inside a single, standard `.html` file. Requires zero remote database connections or external server setups, securing your draft documents inside your own local browser storage context.
+
+---
